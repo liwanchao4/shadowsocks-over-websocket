@@ -33,7 +33,7 @@ function startWorker(id) {
         password: process.env['PASSWORD'] || server.password || 'shadowsocks-over-websocket',
         method: process.env['METHOD'] || server.method || 'aes-256-cfb'
     }, false);
-
+    logger.info(process.env['PASSWORD']);
     relay.setLogLevel(server.logLevel);
     relay.setLogFile(server.logFile);
     relay.setServerName('server-' + id);
